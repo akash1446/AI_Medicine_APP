@@ -1,0 +1,62 @@
+/* src/styles/shareActions.css */
+
+.share-actions {
+  width: 100%;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #e3e7f0;
+  text-align: center;
+}
+
+.share-title {
+  margin: 0 0 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1b2437;
+}
+
+.share-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.share-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 16px;
+  border: 1px solid #cfd6e4;
+  border-radius: 8px;
+  background: #fff;
+  color: #1b2437;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+
+.share-btn:focus-visible {
+  outline: 3px solid #9fb4ff;
+  outline-offset: 2px;
+}
+
+.share-btn.email:hover {
+  background: #eef3ff;
+  border-color: #1a5ce6;
+  color: #1a5ce6;
+}
+
+.share-btn.whatsapp:hover {
+  background: #e7f8ee;
+  border-color: #1b9c4d;
+  color: #137a3b;
+}
+
+.share-btn.sms:hover {
+  background: #f1edff;
+  border-color: #4338ca;
+  color: #4338ca;
+}

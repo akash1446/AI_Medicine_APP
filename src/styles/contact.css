@@ -1,0 +1,36 @@
+.contact-container {
+  width: 100%;
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 20px;
+  border: 1px solid #e2e8f0;
+}
+
+.contact-container h2 {
+  color: #6366f1 !important;
+  font-size: 40px;
+  text-align: center;
+}
+
+.contact-container p {
+  color: #475569 !important;
+  font-size: 18px;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.contact-info {
+  margin-top: 20px;
+}
+
+.contact-info p {
+  margin: 15px 0;
+  color: #475569 !important;
+}
+
+.contact-info strong {
+  color: #6366f1;
+}

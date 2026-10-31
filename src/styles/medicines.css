@@ -1,0 +1,148 @@
+/* ===== Medicines Page Wrapper ===== */
+.medicines-page {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 24px 20px 60px;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f8fafc;
+}
+
+/* ===== Page Heading ===== */
+.medicines-title {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #1e293b;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* ===== Medicines Grid ===== */
+.medicines-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+/* ===== No Results ===== */
+.no-results {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #64748b;
+  font-size: 16px;
+  padding: 40px 0;
+}
+
+/* ===== Medicine Card ===== */
+.medicine-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.05);
+}
+
+.medicine-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(99, 102, 241, 0.12);
+  border-color: #c7d2fe;
+}
+
+/* ===== Medicine Image ===== */
+.medicine-img {
+  width: 130px;
+  height: 130px;
+  object-fit: contain;
+  margin: 0 auto 16px;
+  display: block;
+}
+
+/* ===== Medicine Name ===== */
+.medicine-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 10px;
+  min-height: 48px;
+}
+
+/* ===== Medicine Price ===== */
+.medicine-price {
+  font-size: 18px;
+  font-weight: 700;
+  color: #059669;
+  margin-bottom: 16px;
+}
+
+/* ===== Add To Cart Button ===== */
+.add-to-cart-btn {
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+  padding: 12px;
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.15s ease;
+}
+
+.add-to-cart-btn:hover {
+  opacity: 0.9;
+}
+
+.add-to-cart-btn:active {
+  transform: scale(0.97);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .medicines-title {
+    font-size: 1.7rem;
+  }
+
+  .medicines-grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 18px;
+  }
+
+  .medicine-img {
+    width: 110px;
+    height: 110px;
+  }
+}
+
+@media (max-width: 480px) {
+  .medicines-page {
+    padding: 16px;
+  }
+
+  .medicines-title {
+    font-size: 1.4rem;
+  }
+
+  .medicines-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .medicine-card {
+    padding: 14px;
+  }
+
+  .medicine-img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .medicine-name {
+    font-size: 14px;
+  }
+
+  .medicine-price {
+    font-size: 16px;
+  }
+}

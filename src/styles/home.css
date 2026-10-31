@@ -1,0 +1,304 @@
+/* ===== Page Wrapper ===== */
+.home-page {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 24px 20px 60px;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f8fafc;
+}
+
+/* ===== Search Bar ===== */
+.search-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+.search-bar {
+  flex: 1;
+  padding: 13px 18px;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  font-size: 14px;
+  color: #334155;
+  background: #ffffff;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.search-bar::placeholder {
+  color: #94a3b8;
+}
+.search-bar:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+.search-btn {
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  width: 46px;
+  height: 46px;
+  font-size: 16px;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: opacity 0.2s ease, transform 0.15s ease;
+}
+.search-btn:hover {
+  opacity: 0.9;
+}
+.search-btn:active {
+  transform: scale(0.96);
+}
+.voice-btn {
+  background: #eef2ff;
+  border: 1px solid #c7d2fe;
+  border-radius: 12px;
+  width: 46px;
+  height: 46px;
+  font-size: 18px;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.2s ease;
+}
+.voice-btn:hover {
+  background: #e0e7ff;
+}
+.voice-btn.listening {
+  background: #fee2e2;
+  border-color: #fecaca;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+/* ===== Prescription Banner ===== */
+.prescription-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: linear-gradient(135deg, #0ea5e9, #6366f1);
+  color: #ffffff;
+  border-radius: 16px;
+  padding: 22px 26px;
+  margin-bottom: 28px;
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.25);
+}
+.prescription-banner h3 {
+  margin: 0 0 6px;
+  font-size: 18px;
+  color: #ffffff;
+}
+.prescription-banner p {
+  margin: 0;
+  font-size: 13px;
+  color: #e0f2fe;
+}
+.upload-btn {
+  background: #ffffff;
+  color: #4f46e5;
+  border: none;
+  border-radius: 10px;
+  padding: 11px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+.upload-btn:hover {
+  background: #f0f4ff;
+}
+.upload-btn:active {
+  transform: scale(0.97);
+}
+
+/* ===== Quick Actions Grid ===== */
+.quick-actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 16px;
+  margin-bottom: 28px;
+}
+.action-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 20px 10px;
+  text-decoration: none;
+  color: #334155;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.action-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(99, 102, 241, 0.12);
+  border-color: #c7d2fe;
+}
+.action-icon {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+.action-card p {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: #475569;
+  text-align: center;
+}
+
+/* ===== Offers Banner ===== */
+.offers-banner {
+  background: linear-gradient(135deg, #fef3c7, #fde68a);
+  border: 1px solid #fcd34d;
+  border-radius: 12px;
+  padding: 16px 20px;
+  text-align: center;
+  margin-bottom: 28px;
+}
+.offers-banner p {
+  margin: 0;
+  color: #92400e;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* ===== Featured Medicines ===== */
+.featured-section {
+  margin-bottom: 28px;
+}
+.featured-section h2 {
+  margin: 0 0 18px;
+  font-size: 20px;
+  color: #1e293b;
+}
+.featured-section h3 {
+  color: #475569;
+  font-weight: 500;
+}
+.medicine-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 18px;
+}
+.medicine-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 16px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.medicine-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(99, 102, 241, 0.12);
+}
+.medicine-card img {
+  border-radius: 10px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  background: #f1f5f9;
+}
+.medicine-card h3 {
+  margin: 6px 0 4px;
+  font-size: 15px;
+  color: #1e293b;
+}
+.medicine-card p {
+  margin: 0 0 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #4f46e5;
+}
+.medicine-card button {
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 18px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+.medicine-card button:hover {
+  opacity: 0.9;
+}
+
+/* ===== Health Tips ===== */
+.health-tips {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 20px 24px;
+  margin-bottom: 28px;
+}
+.health-tips h2 {
+  margin: 0 0 14px;
+  font-size: 20px;
+  color: #1e293b;
+}
+.health-tips ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.health-tips li {
+  padding: 10px 0;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 14px;
+  color: #334155;
+}
+.health-tips li:last-child {
+  border-bottom: none;
+}
+
+/* ===== Emergency Banner ===== */
+.emergency-banner {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: #ffffff;
+  border-radius: 14px;
+  padding: 22px 24px;
+  text-align: center;
+}
+.emergency-banner h2 {
+  margin: 0 0 8px;
+  font-size: 20px;
+  color: #ffffff;
+}
+.emergency-banner p {
+  margin: 0 0 6px;
+  font-size: 14px;
+  color: #fee2e2;
+}
+.emergency-banner h3 {
+  margin: 0;
+  font-size: 22px;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+  .prescription-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+  .upload-btn {
+    width: 100%;
+  }
+  .quick-actions {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .medicine-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

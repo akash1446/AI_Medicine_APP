@@ -1,0 +1,417 @@
+/* ConsultDoctor page — matches the Medicine App blue / indigo look */
+
+.consult-page {
+  --blue: #1a5ce6;
+  --indigo: #4338ca;
+  --indigo-dark: #3730a3;
+  --ink: #1b2437;
+  --muted: #5d6679;
+  --line: #e3e7f0;
+  --bg-soft: #f3f6fd;
+  --danger: #c62828;
+  --success: #1b8a4b;
+
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 20px 56px;
+  color: var(--ink);
+}
+
+/* ---------- Header ---------- */
+.consult-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.consult-header h1 {
+  margin: 0 0 8px;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.consult-header p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+/* ---------- Filters ---------- */
+.consult-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+
+.filter-chip {
+  padding: 8px 16px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.filter-chip:hover {
+  border-color: var(--indigo);
+}
+
+.filter-chip.active {
+  background: var(--indigo);
+  border-color: var(--indigo);
+  color: #fff;
+}
+
+/* ---------- Doctor grid ---------- */
+.doctor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.doctor-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 20px 20px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  text-align: center;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.doctor-card:hover {
+  border-color: #b9c3ee;
+  box-shadow: 0 6px 20px rgba(26, 92, 230, 0.1);
+}
+
+.doctor-avatar {
+  display: grid;
+  place-items: center;
+  width: 88px;
+  height: 88px;
+  margin-bottom: 14px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #dfe8ff, #e9e4ff);
+  color: var(--indigo);
+  font-size: 1.7rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.doctor-avatar.small {
+  width: 52px;
+  height: 52px;
+  margin: 0;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.doctor-card h3 {
+  margin: 0 0 4px;
+  font-size: 1.1rem;
+}
+
+.specialization {
+  margin: 0;
+  color: var(--blue);
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+
+.doctor-meta {
+  width: 100%;
+  margin: 16px 0;
+  padding: 12px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  display: grid;
+  gap: 8px;
+}
+
+.doctor-meta div {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 0.88rem;
+}
+
+.doctor-meta dt {
+  color: var(--muted);
+}
+
+.doctor-meta dd {
+  margin: 0;
+  font-weight: 600;
+  text-align: right;
+}
+
+.fee {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin: 0 0 16px;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.fee strong {
+  font-size: 1.3rem;
+  color: var(--ink);
+}
+
+/* ---------- Buttons ---------- */
+.consult-btn {
+  margin-top: auto;
+  padding: 10px 20px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--indigo);
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.consult-btn:hover {
+  background: var(--indigo-dark);
+}
+
+.consult-btn.full {
+  width: 100%;
+  margin-top: 8px;
+  padding: 12px;
+}
+
+.consult-page button:focus-visible,
+.consult-page input:focus-visible {
+  outline: 3px solid #9fb4ff;
+  outline-offset: 2px;
+}
+
+/* ---------- Modal ---------- */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  background: rgba(15, 23, 42, 0.55);
+  animation: backdrop-in 0.15s ease-out;
+}
+
+.modal {
+  position: relative;
+  width: 100%;
+  max-width: 460px;
+  max-height: calc(100vh - 32px);
+  overflow-y: auto;
+  padding: 28px 24px 24px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.3);
+  animation: modal-in 0.2s ease-out;
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  width: 34px;
+  height: 34px;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--muted);
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.modal-close:hover {
+  background: var(--bg-soft);
+}
+
+.modal-doctor {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+  padding-right: 28px;
+}
+
+.modal-doctor h2 {
+  margin: 0 0 2px;
+  font-size: 1.15rem;
+}
+
+/* ---------- Form ---------- */
+.field-group {
+  margin: 0 0 18px;
+  padding: 0;
+  border: 0;
+}
+
+.field-group legend {
+  margin-bottom: 8px;
+  padding: 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.day-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+}
+
+.day-chip,
+.slot-chip {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+
+.day-chip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 8px 4px;
+  font-size: 0.75rem;
+}
+
+.day-chip strong {
+  font-size: 0.82rem;
+}
+
+.slot-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.slot-chip {
+  padding: 9px 4px;
+  font-size: 0.85rem;
+}
+
+.day-chip:hover,
+.slot-chip:hover {
+  border-color: var(--indigo);
+}
+
+.day-chip.active,
+.slot-chip.active {
+  background: var(--indigo);
+  border-color: var(--indigo);
+  color: #fff;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.field label {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.field input {
+  padding: 10px 12px;
+  border: 1px solid #cfd6e4;
+  border-radius: 8px;
+  font: inherit;
+}
+
+.field input:focus {
+  border-color: var(--indigo);
+}
+
+.error-text {
+  margin: 6px 0 0;
+  color: var(--danger);
+  font-size: 0.82rem;
+}
+
+/* ---------- Confirmation ---------- */
+.confirmation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 12px 0 4px;
+}
+
+.confirmation-icon {
+  display: grid;
+  place-items: center;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 14px;
+  border-radius: 50%;
+  background: #e3f6ea;
+  color: var(--success);
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.confirmation h2 {
+  margin: 0 0 10px;
+}
+
+.confirmation-text {
+  margin: 0 0 8px;
+  line-height: 1.5;
+}
+
+.confirmation-sub {
+  margin: 0 0 20px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* ---------- Motion ---------- */
+@keyframes backdrop-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes modal-in {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .modal-backdrop,
+  .modal {
+    animation: none;
+  }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 480px) {
+  .consult-header h1 {
+    font-size: 1.6rem;
+  }
+
+  .slot-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

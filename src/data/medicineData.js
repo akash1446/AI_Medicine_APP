@@ -1,0 +1,48 @@
+const medicineData = [
+  { id: 1, name: "Paracetamol", price: 30, img: "/Images/Paracetamol.jpg" },
+  { id: 2, name: "Ibuprofen", price: 50, img: "/Images/Ibuprofen.jpg" },
+  { id: 3, name: "Vitamin C", price: 80, img: "/Images/Vitamin C.jpg" },
+  { id: 4, name: "Amoxicillin", price: 60, img: "/Images/Amoxicillin.jpg" },
+  { id: 5, name: "Azithromycin", price: 70, img: "/Images/azithromycin.jpg" },
+  { id: 6, name: "Cetirizine", price: 95, img: "/Images/cetirizine.jpg" },
+  {
+    id: 7,
+    name: "Levocetirizine",
+    price: 230,
+    img: "/Images/levocetirizine.jpg",
+  },
+  { id: 8, name: "Live52", price: 75, img: "/Images/liv52.jpg" },
+  { id: 9, name: "iron", price: 250, img: "/Images/iron.jpg" },
+  { id: 10, name: "Insulin", price: 150, img: "/Images/insulin.jpg" },
+  { id: 11, name: "Metformin", price: 98, img: "/Images/metformin.jpg" },
+  { id: 12, name: "Multivitamin", price: 85, img: "/Images/multivitamin.jpg" },
+  { id: 13, name: "Dolo 650", price: 190, img: "/Images/Dolo 650.webp" },
+  { id: 14, name: "zinc", price: 90, img: "/Images/zinc.jpg" },
+  { id: 15, name: "Ors", price: 20, img: "/Images/ors.jpg" },
+  { id: 16, name: "Digene", price: 90, img: "/Images/digene.jpg" },
+  { id: 17, name: "vitamin D3", price: 90, img: "/Images/vitamin D3.jpg" },
+  {
+    id: 18,
+    name: "Electralpowder",
+    price: 90,
+    img: "/Images/electralpowder.jpg",
+  },
+  {
+    id: 19,
+    name: "dextromethorphan",
+    price: 90,
+    img: "/Images/dextromethorphan.png",
+  },
+  { id: 20, name: "Coughsyrup", price: 175, img: "/Images/coughsyrup.jpg" },
+  { id: 21, name: "aspirin", price: 190, img: "/Images/aspirin.jpg" },
+  {
+    id: 22,
+    name: "Atorvastatin",
+    price: 150,
+    img: "/Images/Atorvastatin.webp",
+  },
+  { id: 23, name: "calcium", price: 220, img: "/Images/calcium.jpg" },
+  { id: 24, name: "benadryl", price: 90, img: "/Images/benadryl.jpg" },
+];
+
+export default medicineData;
